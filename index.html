@@ -14,17 +14,17 @@
 
   <!-- Navbar -->
   <!-- Menü Şeridi Başlangıcı -->
-<!-- Menü Şeridi Başlangıcı -->
-<nav class="bg-white border-b border-gray-100 py-4">
-    <div class="container mx-auto flex justify-between items-center px-6">
+<!-- Menü Şeridi Başlangıcı (Beyaz fon yüksekliği sabitlendi) -->
+<nav class="bg-white border-b border-gray-100 h-24 flex items-center">
+    <div class="container mx-auto flex justify-between items-center px-6 h-full">
         
-        <!-- Logo Alanı (%50 Büyütüldü) -->
-        <div class="flex items-center py-1">
-            <img src="logo_golden_bee.svg" alt="Golden Bee" class="h-36 w-auto object-contain">
+        <!-- Logo Alanı (Fondan bağımsız olarak dışa doğru %25 büyütüldü) -->
+        <div class="flex items-center h-full">
+            <img src="logo_golden_bee.svg" alt="Golden Bee" class="h-20 w-auto object-contain transform scale-125 origin-left">
         </div>
 
-        <!-- Menü Linkleri -->
-        <div class="hidden md:flex gap-8 text-lg font-semibold text-green-600 whitespace-nowrap items-center">
+        <!-- Menü Linkleri (Karakterler bağımsız olarak text-xl yapıldı) -->
+        <div class="hidden md:flex gap-8 text-xl font-bold text-green-600 whitespace-nowrap items-center h-full">
             <a href="index.html" class="hover:text-green-800 transition-colors">Ana Sayfa</a>
             <a href="hakkimizda.html" class="hover:text-green-800 transition-colors">Hakkımızda</a>
             <a href="urunler.html" class="hover:text-green-800 transition-colors">Ürünlerimiz</a>
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Mobil Menü Butonu -->
-        <button onclick="toggleMenu()" class="md:hidden text-3xl text-green-600">≡</button>
+        <button onclick="toggleMenu()" class="md:hidden text-4xl text-green-600">≡</button>
 
     </div>
 </nav>
