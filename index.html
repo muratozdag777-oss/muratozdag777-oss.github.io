@@ -16,12 +16,20 @@
   <nav class="bg-green-700 text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <span class="text-3xl">🐝</span>
-        <div>
-          <h1 class="text-2xl font-bold tracking-tight">Goldenbee</h1>
-          <p class="text-xs text-green-200 -mt-1">The Art of Freshness</p>
-        </div>
+        <img src="logo.png" alt="Goldenbee" class="h-12 w-auto">
       </div>
+      
+      <div class="hidden md:flex gap-8 text-lg font-medium">
+        <a href="index.html" class="hover:text-green-200 transition-colors">Ana Sayfa</a>
+        <a href="hakkimizda.html" class="hover:text-green-200 transition-colors">Hakkımızda</a>
+        <a href="urunler.html" class="hover:text-green-200 transition-colors">Ürünlerimiz</a>
+        <a href="ihracat.html" class="hover:text-green-200 transition-colors">İhracat</a>
+        <a href="iletisim.html" class="hover:text-green-200 transition-colors">İletişim</a>
+      </div>
+      
+      <button onclick="toggleMenu()" class="md:hidden text-3xl">☰</button>
+    </div>
+  </nav>
       <div class="hidden md:flex gap-8 text-lg">
         <a href="index.html" class="hover:text-green-200 transition">Ana Sayfa</a>
         <a href="hakkimizda.html" class="hover:text-green-200 transition">Hakkımızda</a>
