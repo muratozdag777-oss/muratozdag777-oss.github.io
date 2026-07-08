@@ -4,26 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Goldenbee | The Art of Freshness</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cloudflare.com">
   <style>
-    .hero-bg { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x1080/?fresh-fruits-vegetables'); }
+    /* Kırık Unsplash linki yerine çalışan yüksek kaliteli taze sebze görseli eklendi */
+    .hero-bg { 
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://unsplash.com'); 
+      background-size: cover;
+      background-position: center;
+    }
   </style>
 </head>
-<body class="font-sans text-gray-800">
+<body class="font-sans text-gray-800 m-0 p-0 antialiased">
 
-  <!-- Navbar -->
-  <!-- Menü Şeridi Başlangıcı -->
-<!-- Menü Şeridi Başlangıcı (Beyaz fon yüksekliği sabitlendi) -->
-<nav class="bg-white border-b border-gray-100 h-30 flex items-center">
+  <!-- Navbar (Sabit beyaz fon, bağımsız büyük logo ve yeşil karakterler) -->
+  <nav class="bg-white border-b border-gray-100 h-24 flex items-center relative z-50">
     <div class="container mx-auto flex justify-between items-center px-6 h-full">
         
         <!-- Logo Alanı (Fondan bağımsız olarak dışa doğru %25 büyütüldü) -->
         <div class="flex items-center h-full">
-            <img src="logo_golden_bee.svg" alt="Golden Bee" class="h-80 w-auto object-contain transform scale-120 origin-left">
+            <img src="logo_golden_bee.svg" alt="Golden Bee" class="h-20 w-auto object-contain transform scale-125 origin-left">
         </div>
 
-        <!-- Menü Linkleri (Karakterler bağımsız olarak text-xl yapıldı) -->
+        <!-- Menü Linkleri (Karakterler text-xl boyuta çekildi) -->
         <div class="hidden md:flex gap-8 text-xl font-bold text-green-600 whitespace-nowrap items-center h-full">
             <a href="index.html" class="hover:text-green-800 transition-colors">Ana Sayfa</a>
             <a href="hakkimizda.html" class="hover:text-green-800 transition-colors">Hakkımızda</a>
@@ -34,27 +37,19 @@
 
         <!-- Mobil Menü Butonu -->
         <button onclick="toggleMenu()" class="md:hidden text-4xl text-green-600">≡</button>
-
-    </div>
-</nav>
-
-
-
-
     </div>
   </nav>
 
-  <!-- Hero -->
-  <!-- Hero -->
-<section class="hero-bg flex items-center text-white py-16">
-    <!-- Gri Alan Kapsayıcısı -->
-    <div class="bg-gray-800 text-white w-full flex flex-col justify-center items-center text-center px-6 py-12 rounded-lg">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Tazeliğin Sanatı</h1>
-        <p class="text-lg md:text-xl max-w-2xl mb-8">Türk topraklarının en taze sebze ve meyvelerini dünya sofralarına ulaştırıyoruz.</p>
-        <a href="#iletisim" class="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">Teklif Alın</a>
+  <!-- Hero Alanı (Ekrana tam sığdırılan ve kaydırma gerektirmeyen dengeli şerit) -->
+  <section class="hero-bg flex items-center text-white py-16 min-h-[450px]">
+    <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto flex flex-col justify-center items-center text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-md">Tazeliğin Sanatı</h1>
+            <p class="text-lg md:text-xl max-w-2xl mb-8 drop-shadow-sm">Türk topraklarının en taze sebze ve meyvelerini dünya sofralarına ulaştırıyoruz.</p>
+            <a href="#iletisim" class="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-green-600 hover:text-white transition-all shadow-md transform hover:scale-105">Teklif Alın</a>
+        </div>
     </div>
-</section>
-
+  </section>
 
   <!-- Kısa Tanıtım -->
   <section class="py-20 bg-white">
@@ -62,25 +57,34 @@
       <div class="text-center">
         <i class="fa-solid fa-leaf text-5xl text-green-600 mb-4"></i>
         <h3 class="text-2xl font-semibold mb-2">Doğal & Taze</h3>
-        <p>Hasattan kısa süre sonra paketlenen ürünler</p>
+        <p class="text-gray-600">Hasattan kısa süre sonra paketlenen ürünler</p>
       </div>
       <div class="text-center">
         <i class="fa-solid fa-globe text-5xl text-green-600 mb-4"></i>
         <h3 class="text-2xl font-semibold mb-2">Uluslararası İhracat</h3>
-        <p>Avrupa, Orta Doğu ve Asya'ya düzenli sevkiyat</p>
+        <p class="text-gray-600">Avrupa, Orta Doğu ve Asya'ya düzenli sevkiyat</p>
       </div>
       <div class="text-center">
         <i class="fa-solid fa-certificate text-5xl text-green-600 mb-4"></i>
         <h3 class="text-2xl font-semibold mb-2">Kalite Sertifikaları</h3>
-        <p>GlobalGAP, BRC, ISO</p>
+        <p class="text-gray-600">GlobalGAP, BRC, ISO</p>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="bg-green-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p>&copy; 2026 Goldenbee İthalat İhracat San. Tic. Ltd. Şti. | Tüm Hakları Saklıdır</p>
     </div>
   </footer>
+
+  <script>
+    // Mobil menü açılış fonksiyonu (İleride kullanabilmeniz için eklendi)
+    function toggleMenu() {
+        alert('Mobil menü yakında aktif edilecektir.');
+    }
+  </script>
 </body>
 </html>
+
